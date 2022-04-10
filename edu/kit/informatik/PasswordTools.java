@@ -172,54 +172,6 @@ public final class PasswordTools {
         return secure;
 
     }
-
-    /**
-     * This method checks if a password has been leaked by comparing it to a leaked
-     * data-set. I was not sure if the usage of the method "boolean matches​(String
-     * regex)" is allowed, as it makes this assignment significantly easier. So I
-     * have programmed 2 versions. The password is considered leaked if the password
-     * has the same characters in the same order as it is in the leaked data-set.
-     *
-     * @param leakedDataset contains all the leaked passwords
-     * @param password      we have to check if the password is a part of the leaked
-     *                      data-set
-     * @return true if the password is in the data-set
-     */
-//    public static boolean isPasswordLeaked(String leakedDataset, String password) {
-//
-//        if (password.length() == 0) {
-//
-//            return true;
-//        }
-//        if (password.length() > leakedDataset.length()) {
-//
-//            return false;
-//
-//        }
-//
-//        int matches = 0;
-//        for (int l = 0; l <= leakedDataset.length() - 1; l++) {
-//
-//            // for every matched character increase the matches counter by 1
-//            if (leakedDataset.charAt(l) == password.charAt(matches)) {
-//
-//                matches++;
-//
-//                if (matches == password.length()) {
-//
-//                    return true;
-//                }
-//
-//            } else { // there is no more matches in the sequence so we reset the matches counter to
-//                     // 0.
-//
-//                matches = 0;
-//            }
-//
-//        }
-//        return false;
-//
-//    }
     public static boolean isPasswordLeaked(String leakedDataset, String password) {
 
         
